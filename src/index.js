@@ -28,6 +28,9 @@ function getScale(width = 1920, height = 1080) {
   scale = scale.toFixed(6)
   top = top.toFixed(4)
   left = left.toFixed(4)
+  bodyEl.style.transformOrigin = 'left top 0px'
+  bodyEl.style.webkitTransformOrigin = 'left top 0px'
+  bodyEl.style.MozTransformOrigin = 'left top 0px'
   bodyEl.style.transform = `scale(${scale})`
   bodyEl.style.webkitTransform = `scale(${scale})`
   bodyEl.style.MozTransform = `scale(${scale})`
