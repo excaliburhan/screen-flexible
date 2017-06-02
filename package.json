@@ -1,13 +1,14 @@
 {
   "name": "screen-flexible",
-  "version": "1.0.1",
-  "description": "Adaptive solution for screen or pc pages.",
+  "version": "1.0.7",
+  "description": "Adaptive solution for screen page.",
   "main": "lib/index.js",
   "repository": "git@github.com:excaliburhan/screen-flexible.git",
   "author": "xiaoping <edwardhjp@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "compile": "babel src -d lib"
+    "compile": "babel src -d lib",
+    "upload": "npm run compile && npm publish"
   },
   "devDependencies": {
     "babel-cli": "^6.24.0",

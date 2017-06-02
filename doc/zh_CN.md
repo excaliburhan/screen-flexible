@@ -1,23 +1,19 @@
 # screen-flexible
-Adaptive solution for screen page.
+大屏自适应方案.
 
-## Language
-
-- [中文](https://github.com/excaliburhan/screen-flexible/blob/master/doc/README-zh_CN.md)
-
-## Installation
+## 安装
 
 > npm install screen-flexible
 
-## Usage
+## 使用
 
-### The screen resolution is: 1920*1080
+### 当屏幕分辨率是1920*1080
 
 ```js
 import 'screen-flexible/lib/auto'
 ```
 
-### The screen resolution is custom, eg: 1600*1000
+### 当屏幕分辨率不一定，比如: 1600*1000
 
 ```js
 import { getScale } from 'screen-flexible'
