@@ -1,6 +1,6 @@
 {
   "name": "screen-flexible",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Adaptive solution for screen page.",
   "main": "lib/index.js",
   "repository": "git@github.com:excaliburhan/screen-flexible.git",
