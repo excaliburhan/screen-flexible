@@ -1,2 +1,2 @@
 # screen-flexible
-Adaptive solution for screen or pc pages.
+Adaptive solution for screen page.
