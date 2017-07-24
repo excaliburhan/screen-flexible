@@ -3,7 +3,7 @@ Adaptive solution for screen page.
 
 ## Language
 
-- [中文](https://github.com/excaliburhan/screen-flexible/blob/master/doc/zh_CN.md)
+- [中文](https://github.com/excaliburhan/screen-flexible/blob/master/docs/zh_CN.md)
 
 ## Installation
 
