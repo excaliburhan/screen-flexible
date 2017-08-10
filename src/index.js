@@ -60,22 +60,53 @@ function bodyResize (width = 1920, height = 1080, type = 'padding') {
   bodyEl.style.marginTop = `${top}px`
 }
 
-function domResize (dom, parentDom, width = '1920', height = '1080') {
+function domResize (dom, parentDom, width = '1920', height = '1080', type = 'padding') {
   const offsetWidth = parentDom.offsetWidth
   const offsetHeight = parentDom.offsetHeight
   const scaleX = offsetWidth / width
   const scaleY = offsetHeight / height
-  let scale = scaleX < scaleY ? scaleX : scaleY
+  let top = 0
+  let left = 0
+  let scale
+  if (type === 'padding') {
+    if (scaleX < scaleY) {
+      scale = scaleX
+      top = (offsetHeight - height * scale) / 2
+    } else if (scaleX > scaleY) {
+      scale = scaleY
+      left = (offsetWidth - width * scale) / 2
+    } else {
+      // 同步放大/缩小
+      scale = scaleX
+    }
+  } else if (type === 'width') {
+    scale = scaleX
+  } else if (type === 'height') {
+    scale = scaleY
+  } else if (type === 'full') {
+    // do nothing
+  }
 
   scale = scale.toFixed(6)
-  dom.style.width = width + 'px'
-  dom.style.height = height + 'px'
+  top = top.toFixed(4)
+  left = left.toFixed(4)
+  dom.style.width = `${width}px`
+  dom.style.height = `${height}px`
   dom.style.transformOrigin = 'left top 0px'
   dom.style.webkitTransformOrigin = 'left top 0px'
   dom.style.MozTransformOrigin = 'left top 0px'
-  dom.style.transform = `scale(${scale})`
-  dom.style.webkitTransform = `scale(${scale})`
-  dom.style.MozTransform = `scale(${scale})`
+  // 全部铺满
+  if (type === 'full') {
+    dom.style.transform = `scale(${scaleX}, ${scaleY})`
+    dom.style.webkitTransform = `scale(${scaleX}, ${scaleY})`
+    dom.style.MozTransform = `scale(${scaleX}, ${scaleY})`
+  } else {
+    dom.style.transform = `scale(${scale})`
+    dom.style.webkitTransform = `scale(${scale})`
+    dom.style.MozTransform = `scale(${scale})`
+  }
+  dom.style.marginLeft = `${left}px`
+  dom.style.marginTop = `${top}px`
 }
 
 module.exports = {
