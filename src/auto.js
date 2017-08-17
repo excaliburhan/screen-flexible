@@ -7,20 +7,20 @@
 */
 
 import { on } from 'xp-dom'
-import { bodyScale } from './index.js'
+import { bodyResize } from './index.js'
 
 let timer
 
 on(window, 'resize', () => {
   clearTimeout(timer)
-  timer = setTimeout(bodyScale, 300) // throttle
+  timer = setTimeout(bodyResize, 300) // throttle
 })
 
 on(window, 'pageshow', (e) => {
   if (e.persisted) {
     clearTimeout(timer)
-    timer = setTimeout(bodyScale, 300) // throttle
+    timer = setTimeout(bodyResize, 300) // throttle
   }
 })
 
-bodyScale()
+bodyResize()
