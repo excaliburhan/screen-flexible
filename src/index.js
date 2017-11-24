@@ -18,7 +18,7 @@ function bodyResize (width = 1920, height = 1080, type = 'padding') {
   const scaleY = offsetHeight / height
   let top = 0
   let left = 0
-  let scale
+  let scale = 1 // 初始化为1
   if (type === 'padding') {
     if (scaleX < scaleY) {
       scale = scaleX
@@ -67,7 +67,7 @@ function domResize (dom, parentDom, width = '1920', height = '1080', type = 'pad
   const scaleY = offsetHeight / height
   let top = 0
   let left = 0
-  let scale
+  let scale = 1
   if (type === 'padding') {
     if (scaleX < scaleY) {
       scale = scaleX

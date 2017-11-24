@@ -2117,6 +2117,12 @@ safe-buffer@^5.0.1:
   version "5.0.1"
   resolved "https://registry.npmjs.org/safe-buffer/-/safe-buffer-5.0.1.tgz#d263ca54696cd8a306b5ca6551e92de57918fbe7"
 
+screen-flexible@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.npmjs.org/screen-flexible/-/screen-flexible-1.1.2.tgz#402a43895851ccd04e0f96285800d81fae506966"
+  dependencies:
+    xp-dom "^1.0.2"
+
 semver@^5.3.0:
   version "5.3.0"
   resolved "https://registry.npmjs.org/semver/-/semver-5.3.0.tgz#9b2ce5d3de02d17c6012ad326aa6b4d0cf54f94f"
