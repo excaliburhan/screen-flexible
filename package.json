@@ -7,6 +7,7 @@
   "author": "xiaoping <edwardhjp@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "prepare": "npm run compile",
     "compile": "babel src -d lib",
     "upload": "npm run compile && npm publish"
   },
