@@ -14,7 +14,7 @@ Adaptive solution for screen page.
 ### The screen resolution is: 1920*1080
 
 ```js
-import 'screen-flexible/lib/auto'
+import 'screen-flexible/dist/auto'
 ```
 
 ### The screen resolution is custom, eg: 1600*1000
