@@ -6,7 +6,7 @@
  * @desc [scale methods]
 */
 
-function bodyResize (width = 1920, height = 1080, type = 'padding') {
+export function bodyResize (width = 1920, height = 1080, type = 'padding') {
   const docEl = document.documentElement
   const bodyEl = document.body
   // 设置docEl初始样式
@@ -60,7 +60,7 @@ function bodyResize (width = 1920, height = 1080, type = 'padding') {
   bodyEl.style.marginTop = `${top}px`
 }
 
-function domResize (dom, parentDom, width = '1920', height = '1080', type = 'padding') {
+export function domResize (dom, parentDom, width = '1920', height = '1080', type = 'padding') {
   const offsetWidth = parentDom.offsetWidth
   const offsetHeight = parentDom.offsetHeight
   const scaleX = offsetWidth / width
@@ -109,7 +109,4 @@ function domResize (dom, parentDom, width = '1920', height = '1080', type = 'pad
   dom.style.marginTop = `${top}px`
 }
 
-module.exports = {
-  bodyResize,
-  domResize
-}
+export default bodyResize

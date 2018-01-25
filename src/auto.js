@@ -13,13 +13,13 @@ let timer
 
 on(window, 'resize', () => {
   clearTimeout(timer)
-  timer = setTimeout(bodyResize, 300) // throttle
+  timer = setTimeout(bodyResize, 150) // throttle
 })
 
 on(window, 'pageshow', (e) => {
   if (e.persisted) {
     clearTimeout(timer)
-    timer = setTimeout(bodyResize, 300) // throttle
+    timer = setTimeout(bodyResize, 150) // throttle
   }
 })
 
