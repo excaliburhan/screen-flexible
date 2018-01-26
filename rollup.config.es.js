@@ -31,17 +31,13 @@ if (process.env.NODE_TYPE === 'auto') {
     input: 'src/auto.js',
     output: [
       {
-        file: 'dist/auto.js', // 输出的文件 (如果没有这个参数，则直接输出到控制台)
-        format: 'umd', // 输出的文件类型 (amd, cjs, es, iife, umd)
-        name: 'screenFlexibleAuto', // 生成UMD模块的名字
-        exports: 'named', // 导出模式，在导出多个时候使用
+        file: 'dist/auto.es.js', // 输出的文件 (如果没有这个参数，则直接输出到控制台)
+        format: 'es', // 输出的文件类型 (amd, cjs, es, iife, umd)
         // sourcemap: true, // 生成 sourcemap (`-m inline` for inline map)
       },
       { // 兼容老的代码
-        file: 'lib/auto.js', // 输出的文件 (如果没有这个参数，则直接输出到控制台)
-        format: 'umd', // 输出的文件类型 (amd, cjs, es, iife, umd)
-        name: 'screenFlexibleAuto', // 生成UMD模块的名字
-        exports: 'named', // 导出模式，在导出多个时候使用
+        file: 'lib/auto.es.js', // 输出的文件 (如果没有这个参数，则直接输出到控制台)
+        format: 'es', // 输出的文件类型 (amd, cjs, es, iife, umd)
         // sourcemap: true, // 生成 sourcemap (`-m inline` for inline map)
       }
     ],
@@ -52,17 +48,13 @@ if (process.env.NODE_TYPE === 'auto') {
     input: 'src/index.js',
     output: [
       {
-        file: 'dist/index.js', // 输出的文件 (如果没有这个参数，则直接输出到控制台)
-        format: 'umd', // 输出的文件类型 (amd, cjs, es, iife, umd)
-        name: 'screenFlexible', // 生成UMD模块的名字
-        exports: 'named', // 导出模式，在导出多个时候使用
+        file: 'dist/index.es.js', // 输出的文件 (如果没有这个参数，则直接输出到控制台)
+        format: 'es', // 输出的文件类型 (amd, cjs, es, iife, umd)
         // sourcemap: true, // 生成 sourcemap (`-m inline` for inline map)
       },
       { // 兼容老的代码
-        file: 'lib/index.js', // 输出的文件 (如果没有这个参数，则直接输出到控制台)
-        format: 'umd', // 输出的文件类型 (amd, cjs, es, iife, umd)
-        name: 'screenFlexible', // 生成UMD模块的名字
-        exports: 'named', // 导出模式，在导出多个时候使用
+        file: 'lib/index.es.js', // 输出的文件 (如果没有这个参数，则直接输出到控制台)
+        format: 'es', // 输出的文件类型 (amd, cjs, es, iife, umd)
         // sourcemap: true, // 生成 sourcemap (`-m inline` for inline map)
       }
     ],

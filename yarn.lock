@@ -1872,9 +1872,9 @@ write@^0.2.1:
   dependencies:
     mkdirp "^0.5.1"
 
-xp-dom@^1.0.5:
-  version "1.0.5"
-  resolved "https://registry.npmjs.org/xp-dom/-/xp-dom-1.0.5.tgz#ec82f00a81388b84e35bbaa3c181bb48894bedcb"
+xp-dom@^1.0.6:
+  version "1.0.6"
+  resolved "https://registry.npmjs.org/xp-dom/-/xp-dom-1.0.6.tgz#fdf030174cccbc97eae4ec1f787587110d434608"
 
 yallist@^2.1.2:
   version "2.1.2"

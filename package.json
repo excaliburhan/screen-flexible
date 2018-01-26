@@ -9,9 +9,9 @@
   "scripts": {
     "prepublishOnly": "npm run build",
     "dev": "rollup -c -w",
-    "build:auto": "NODE_TYPE=auto rollup -c",
-    "build:index": "NODE_TYPE=index rollup -c",
-    "build": "npm run build:index && npm run build:auto"
+    "build:umd": "rollup -c && NODE_TYPE=auto rollup -c",
+    "build:es": "rollup -c rollup.config.es.js && NODE_TYPE=auto rollup -c rollup.config.es.js",
+    "build": "npm run build:umd && npm run build:es"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -25,6 +25,6 @@
     "rollup-plugin-uglify": "^3.0.0"
   },
   "dependencies": {
-    "xp-dom": "^1.0.5"
+    "xp-dom": "^1.0.6"
   }
 }
