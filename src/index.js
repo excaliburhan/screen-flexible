@@ -6,6 +6,8 @@
  * @desc [scale methods]
 */
 
+import { on } from 'xp-dom'
+
 export function bodyResize (width = 1920, height = 1080, type = 'padding') {
   const docEl = document.documentElement
   const bodyEl = document.body
@@ -107,6 +109,24 @@ export function domResize (dom, parentDom, width = '1920', height = '1080', type
   }
   dom.style.marginLeft = `${left}px`
   dom.style.marginTop = `${top}px`
+}
+
+export function bindResize (options = { width: 1920, height: 1080 }, delay = 150) {
+  let timer
+  if (!options.type) options.type = 'padding'
+
+  on(window, 'resize', () => {
+    clearTimeout(timer)
+    timer = setTimeout(() => { bodyResize(options.width, options.height, options.type) }, delay)
+  })
+  on(window, 'pageshow', (e) => {
+    if (e.persisted) {
+      clearTimeout(timer)
+      timer = setTimeout(() => { bodyResize(options.width, options.height, options.type) }, delay)
+    }
+  })
+
+  bodyResize(options.width, options.height, options.type)
 }
 
 export default bodyResize

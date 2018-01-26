@@ -15,6 +15,15 @@ import 'screen-flexible/lib/auto'
 
 ### 当屏幕分辨率不一定，比如: 1600*1000
 
+
+```js
+import { bindResize } from 'screen-flexible'
+
+bindResize({ width: 1600, height: 1000 }) // 自动调用 `bodyResize` 方法
+```
+
+或者
+
 ```js
 import { bodyResize } from 'screen-flexible'
 

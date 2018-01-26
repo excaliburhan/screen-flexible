@@ -20,6 +20,14 @@ import 'screen-flexible/dist/auto'
 ### The screen resolution is custom, eg: 1600*1000
 
 ```js
+import { bindResize } from 'screen-flexible'
+
+bindResize({ width: 1600, height: 1000 }) // this will call `bodyResize`
+```
+
+OR
+
+```js
 import { bodyResize } from 'screen-flexible'
 
 let timer
