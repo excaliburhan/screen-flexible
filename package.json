@@ -1,8 +1,9 @@
 {
   "name": "screen-flexible",
-  "version": "1.1.8",
+  "version": "1.1.9",
   "description": "Adaptive solution for screen page.",
   "main": "dist/index.js",
+  "module": "dist/index.es.js",
   "repository": "git@github.com:excaliburhan/screen-flexible.git",
   "author": "xiaoping <edwardhjp@gmail.com>",
   "license": "MIT",
